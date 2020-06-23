@@ -28,6 +28,35 @@ router.get('/products', async (req, res) => {
      
       
 });
+router.post('/products/new-product',async(req,res)=>{
+  const {title,description,type} = req.body;
+  const errors = [];
+  if(!title){
+      errors.push({text: 'Please write a title'});
+  }
+  if(!description){
+      errors.push({text: 'Please write a description'});
+  }
+  if(!type){
+      errors.push({text: 'Please write a type'})
+  }
+  if(errors.length>0){
+      res.render('notes/new-note',{
+          errors,
+          title,
+          description,
+          type
+      });
+  }else{
+    const newProduct =  new Product({title, description,type});
+  
+    await newProduct.save();
+    req.flash('success_msg','Product added succesfully');
+    res.redirect('/products');
+    
+  }
+  
+});
 router.post('/products/addCar',isAuthenticated,async(req,res)=>{
   const {title,description,type} = req.body;
   console.log({title,description,type});
