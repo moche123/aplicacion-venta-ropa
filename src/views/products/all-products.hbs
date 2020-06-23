@@ -1,0 +1,36 @@
+<div class="row">
+    {{#each products}}
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title d-flex justify-content-between">
+                      {{title}}/{{type}} 
+                      <div>
+                          <a href="/products/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                      </div>
+                      
+                    </h4>
+                    <img src="/images/{{description}}.jpg" alt="" class="img-fluid">
+                  
+                     <form action ="/products/addCar" method="POST" >
+                        <input type="hidden" name="title" value="{{title}}">
+                        <input type="hidden" name="description" value="{{description}}">
+                        <input type="hidden" name="type" value="{{type}}">
+                         <button class="btn btn-success btn-block btn-sm" type="submit">
+                            ADD
+                        </button>
+                     </form>
+                </div>
+            </div>
+        </div>    
+        {{else}}
+        <div class="card mx-auto">
+            <div class="card-body">
+               
+                <p class="lead">There are no prroducts yet</p>
+                <a href="/products/add" class="btn btn-success btn-block">¡Crete one!</a>
+            </div>
+        </div>
+
+    {{/each}}
+</div>
