@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://mochemiguel123:<password>@cluster-dgmgg.azure.mongodb.net/test',{
+mongoose.connect('mongodb+srv://mochemiguel123:unprg624@cluster-dgmgg.azure.mongodb.net/test',{
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
