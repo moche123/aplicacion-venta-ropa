@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://mochemiguel123:unprg624@cluster-dgmgg.azure.mongodb.net/test',{
+mongoose.connect('mongodb+srv://moche123:unprg624@cluster-dgmgg.azure.mongodb.net/dbTodo?retryWrites=true&w=majority',{
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
