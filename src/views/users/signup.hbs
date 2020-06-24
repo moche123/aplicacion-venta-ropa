@@ -1,30 +1,31 @@
 <div class="row mt-3">
     <div class="col-md-4 mx-auto">
-        <div class="card">
-            <div class="card-header">
-                Account Register
+        <div class="card-mt-4 text-center">
+            <div class="card-header bg-primary text-white">
+                <h1>Registro</h1>
             </div>
+             <img src="/images/amorpaz.png" class="rounded-circle mx-auto d-block m-4 logo" alt="Logo" width="110px" height="100px">
             <div class="card-body">
                 <form action="/users/signup" method="POST">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="name" placeholder="Name"
+                        <input type="text" class="form-control" name="name" placeholder="Nombre"
                         value="{{name}}">
                     </div>
                     <div class="form-group">
                         <input type="email" class="form-control" name="email" 
-                        placeholder="Email" value="{{email}}">
+                        placeholder="Correo" value="{{email}}">
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" 
-                        name="password" placeholder="Password" value="{{password}}">
+                        name="password" placeholder="Contraseña" value="{{password}}">
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" name="confirm_password"
-                            placeholder="Confirm Password" value="{{confirm_password}}">
+                            placeholder="Confirma contraseña" value="{{confirm_password}}">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">
-                            Sign Up
+                            Registrarse
                         </button>
                     </div>
                 </form>

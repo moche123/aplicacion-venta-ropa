@@ -7,7 +7,7 @@ helpers.isAuthenticated = (req,res,next)=>{
     }
     else{
         req.flash('error_msg','Not Autorized');
-        console.log('No estas logueado');
+       
         res.redirect('/users/signin');
     }
 };
